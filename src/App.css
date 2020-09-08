@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
-  flex-direction: column;
+  background-color: #ECF0F3;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* content */
+.content {
+  background-color: white;
+  max-width: 640px;
+  width: 100%;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px #888888 solid;
+  padding: 16px 24px;
+}
+
+.header__reset {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #888888;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.header__reset span {
+  margin-left: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
+img {
+  width: 18px;
+  height: 18px;
+}
+
+.header__tittle {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.checkboxes {
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  font-size: 12px;
+  border-bottom: 1px #888888 solid;
+}
+
+.checkboxes input {
+  cursor: pointer;
+}
+
+.checkboxes__checkbox + .checkboxes__checkbox {
+  border-left: 1px #888888 solid;
+}
+
+.checkboxes span {
+  text-transform: uppercase;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 55px 22px;
+  width: 100%;
+}
+
+.checkbox-id {
+  padding: 8px 16px 8px 24px;
+}
+
+.checkbox-name {
+  padding: 8px 126px 8px 8px;
+}
+
+.checkbox-year {
+  padding: 8px 16px;
+}
+
+.checkbox-color {
+  padding: 8px 65px 8px 8px;
+}
+
+.checkbox-value {
+  padding: 8px 5px 8px 8px;
+}
+
+td span {
+  margin-left: 4px;
+}
+
+.checkbox-name__span {
+  padding-right: 105px;
+}
+
+.list__item {
+  position: relative;
+}
+
+.list__item + .list__item {
+  border-top: 1px #888888 solid;
+}
+
+.item-id {
+  padding: 16px 16px 16px 40px;
+}
+
+.item-name {
+  padding: 16px 65px 16px 24px;
+}
+
+.item-year {
+  padding: 16px 16px 16px 27px;
+}
+
+.item-color {
+  display: flex;
+  padding: 16px 37px 16px 8px;
+}
+
+.item-value {
+  padding: 16px 55px 16px 8px;
+}
+
+.hide {
+  display: none;
+}
+
+.image {
+  display: block;
+  margin: 0 auto;
+}
+.image:focus, .image:hover {
+  animation: spin 1s 1;
+}
+
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: rotate(359deg);
   }
 }
