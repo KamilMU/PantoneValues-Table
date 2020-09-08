@@ -18,7 +18,12 @@ function App() {
     async function loadData() {
       const response = await fetch('https://reqres.in/api/unknown?per_page=12')
       const data = await response.json()
-      fetchColorsArray(data.data)
+      fetchColorsArray(data.data.map(value => {
+        return {
+          ...value,
+          name: value.name.charAt(0).toUpperCase() + value.name.slice(1)
+        }
+      }))
     }
 
     loadData()
