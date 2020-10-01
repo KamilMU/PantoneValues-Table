@@ -1,6 +1,7 @@
 import React from 'react';
-import Checkboxes from './components/Checkboxes'
-import Table from './components/Table.jsx'
+import Header from './components/Header.jsx';
+import Checkboxes from './components/Checkboxes';
+import Table from './components/Table.jsx';
 import './App.css';
 import useLocalStorage from './hook'
 import { useState, useEffect } from 'react';
@@ -40,17 +41,7 @@ function App() {
   return (
     <div className="app">
       <div className="content">
-        <header className="header">
-          <div className="header__tittle">Pantone colors</div>
-          <div className="header__reset" onClick={reset}>
-            <img
-              alt=""
-              className="image"
-              src={require('./img/Icon.png')}
-            />
-            <span>Reset</span>
-          </div>
-        </header>
+        <Header reset={reset} />
         <Checkboxes
           checkedId={idCheckbox}
           checkedName={nameCheckbox}
